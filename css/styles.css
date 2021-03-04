@@ -1,0 +1,258 @@
+:root{
+    --blanco:#FFFFFF;
+    --oscuro:#212121;
+    --primario:#FFC107;
+    --secundario:#0097A7;
+    --gris: #75757575;
+    --gris_claro:,#DFE9F3;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-snap-type: y mandatory;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    background-image:linear-gradient(to top,var(--gris_claro) 0%,var(--blanco) 100%);
+}
+.titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--oscuro);
+    font-family: 'Shadows Into Light', cursive;
+    padding: 0;
+    margin: 1rem;
+}
+
+.titulo span{
+    font-size: 3rem;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+
+h2{
+    text-align: center;
+}
+
+.nav-principal{
+    background-color: var(--secundario);
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    align-items: center;
+}
+
+nav .contenedor,.contenedor{
+    margin:0 auto;
+}
+
+main.contenedor{
+    width:min(120rem,100%);
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    max-width: 300px;
+    text-align: center;
+}
+
+nav a{
+    color: var(--blanco);
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+nav a:hover{
+    color: var(--oscuro);
+    background-color: var(--primario);
+}
+
+.hero{
+    background-image: url('../img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items:center;
+    margin-bottom: 2rem;
+}
+
+.hero h2{
+    color: var(--blanco);
+    margin: 0;
+    font-weight: bolder;
+}
+
+
+.hero p{
+    color: var(--blanco);
+    margin: 0;
+    font-weight: bolder;
+}
+
+.ubicacion{
+    display: flex;
+    align-items: center;
+    margin: 4rem 4rem;
+}
+
+.sombra {
+    background-color: var(--blanco);
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+    -moz-box-shadow:0px 5px 15px 0px rgba(112,112,112,0.54);
+    box-shadow:0px 5px 15px 0px rgba(112,112,112,0.54);
+    padding-bottom: 2rem;
+
+}
+
+.servicios{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    padding:2rem;
+    column-gap: 2rem;
+}
+
+.servicios section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 33rem;    
+}
+
+.servicios section p{
+    text-align: center;
+    line-height: 1.5;
+}
+
+.servicios section h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicios section .servicios--iconos{
+    height: 20rem;
+    width:20rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section form{
+    box-sizing: border-box;
+    background-color: gray;
+    width: min(60rem,100%);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin:2rem auto;
+}
+
+
+section form fieldset{
+    box-sizing: border-box;
+    border:none;
+    padding: 2rem;
+    margin: 0;
+}
+
+section form legend{
+    box-sizing: border-box;
+    color:var(--primario);
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.campo {margin-bottom: 1rem;}
+
+.contenedor--campos{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.campo label{
+    box-sizing: border-box;
+   color: var(--blanco);
+   font-weight: bold;
+   margin-bottom: .5rem;
+   display: block;
+}
+
+.campo input,
+.campo textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+.form{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+}
+.boton:hover{
+    cursor: pointer;
+}
+
+section form fieldset .boton{
+    width: 100%;
+    margin:0 auto;
+}
+
+footer{
+    text-align: center;
+}
+
+@media (max-width:480px){
+    .nav-principal{
+        flex-direction: column;
+        height: min-content;
+    }
+    nav a{
+        width: 100%;
+        justify-content: center;
+        height: 3rem;
+    }
+    .ubicacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .servicios{
+        display: grid;
+        grid-template-columns:1fr;
+        padding:2rem;
+    }
+}
